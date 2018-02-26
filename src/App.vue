@@ -59,6 +59,9 @@ export default {
       max-width: 1200px
       margin: auto
 
+      @media screen and (max-width: 1200px)
+        margin: auto 2em
+
   .navSection
     position: absolute
     z-index: 99

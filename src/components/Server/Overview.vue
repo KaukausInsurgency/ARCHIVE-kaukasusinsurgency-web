@@ -54,14 +54,23 @@
         padding: 2em 0
         display: flex
 
+        @media screen and (max-width: 1275px)
+            flex-direction: column
+
     .main
         flex-grow: 1
 
         &__head
             display: flex
 
+            @media screen and (max-width: 800px)
+                flex-direction: column
+
         &__campaign-head
             display: flex
+
+            @media screen and (max-width: 800px)
+                flex-direction: column
 
         > img
             margin-top: 2em
@@ -74,6 +83,9 @@
         overflow: hidden
         margin: 0 .5em
 
+        @media screen and (max-width: 800px)
+            margin: .5em 0
+
         &:first-of-type
             margin-left: 0
 
@@ -84,10 +96,16 @@
             color: white - 15
             background: #66a8fb
 
+            @media screen and (max-width: 800px)
+                width: 40%
+
         &-copy
             color: white - 15
             background: #464646 + 20
             transition: .5s background-color
+
+            @media screen and (max-width: 800px)
+                display: none
 
             &:hover
                 background: #464646
@@ -95,6 +113,11 @@
     .side
         padding-left: 2em
         min-width: 300px
+
+        @media screen and (max-width: 1275px)
+            min-width: auto
+            padding-left: 0
+            margin-top: 2em
 
     > img
         width: 100%

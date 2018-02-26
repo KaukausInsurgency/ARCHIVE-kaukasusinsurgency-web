@@ -66,6 +66,9 @@
             flex-direction: column
             justify-content: center
 
+            @media screen and (max-width: 1275px)
+                width: auto
+
             > h1
                 color: white
                 font-size: 2em
@@ -90,6 +93,9 @@
             margin: 0 2em
             z-index: 98
             display: flex
+
+            @media screen and (max-width: 1275px)
+                width: auto
 
         &__nav-link
             color: white

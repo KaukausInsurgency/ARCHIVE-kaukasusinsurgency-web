@@ -5,39 +5,39 @@
                 <div class="servers">
                     <table class="server-table">
                         <tr>
-                            <th>Name</th>
-                            <th>Status</th>
+                            <th class="server__name">Name</th>
+                            <th class="server__status">Status</th>
                             <th>Players</th>
-                            <th>Time Left</th>
-                            <th>Uptime</th>
+                            <th class="server__time-left">Time Left</th>
+                            <th class="server__uptime">Uptime</th>
                         </tr>
                         <tr class="server server--offline">
-                            <td><a href="servers/server">Kaukasus Insurgency - Internal</a></td>
+                            <td class="server__name"><a href="servers/server">Kaukasus Insurgency - Internal</a></td>
                             <td class="server__status">Offline</td>
                             <td> - - - </td>
-                            <td> - - - </td>
-                            <td> - - - </td>
+                            <td class="server__time-left"> - - - </td>
+                            <td class="server__uptime"> - - - </td>
                         </tr>
                         <tr class="server">
-                            <td><a href="servers/server">Kaukasus Insurgency - Alpha</a></td>
+                            <td class="server__name"><a href="servers/server">Kaukasus Insurgency - Alpha</a></td>
                             <td class="server__status">Online</td>
                             <td>10/64</td>
-                            <td>2 minutes</td>
-                            <td>3 days</td>
+                            <td class="server__time-left">2 minutes</td>
+                            <td class="server__uptime">3 days</td>
                         </tr>
                         <tr class="server">
-                            <td><a href="servers/server">Kaukasus Insurgency - Alpha Outside</a></td>
+                            <td class="server__name"><a href="servers/server">Kaukasus Insurgency - Alpha Outside</a></td>
                             <td class="server__status">Online</td>
                             <td>10/64</td>
-                            <td>2 minutes</td>
-                            <td>3 days</td>
+                            <td class="server__time-left">2 minutes</td>
+                            <td class="server__uptime">3 days</td>
                         </tr>
                         <tr class="server">
-                            <td><a href="servers/server">LaggyGamerz Public - Kaukasus Insurgency</a></td>
+                            <td class="server__name"><a href="servers/server">LaggyGamerz Public - Kaukasus Insurgency</a></td>
                             <td class="server__status">Online</td>
                             <td>10/64</td>
-                            <td>2 minutes</td>
-                            <td>3 days</td>
+                            <td class="server__time-left">2 minutes</td>
+                            <td class="server__uptime">3 days</td>
                         </tr>
                     </table>
                     <div class="stats">
@@ -89,6 +89,7 @@
             text-align: center
 
             th
+                color: inherit !important
                 text-align: center
                 border-bottom: 1px solid #565656
 
@@ -130,6 +131,17 @@
                     .server__status
                         color: #fb8585
 
+                @media screen and (max-width: 1200px)
+                    &__time-left, &__uptime
+                        display: none
+
+                @media screen and (max-width: 900px)
+                    &__status, &__time-left, &__uptime
+                        display: none
+
+                    &__name
+                        width: 70%
+
             td
                 margin: 1px 0
                 background: white - 15
@@ -141,13 +153,13 @@
         .stats
             font-family: 'Questrial', sans-serif
             display: flex
-            width: 100%
-            margin-top: 2em
+            flex-wrap: wrap
+            margin-top: 1.5em
             font-size: 1.2em
             justify-content: space-around
 
-            &__items
-                flex-grow: 1
+            &__item
+                margin: .5em 1em
 
     .filters
         flex-grow: 1
