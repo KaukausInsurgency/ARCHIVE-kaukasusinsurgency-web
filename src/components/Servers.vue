@@ -161,6 +161,9 @@
             font-size: 1.2em
             justify-content: space-around
 
+            @media screen and (max-width: 900px)
+                font-size: .8em
+
             &__item
                 margin: .5em 1em
 
