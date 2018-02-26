@@ -72,7 +72,7 @@
             display: flex
             z-index: 98
 
-            @media screen and (max-width: 1200px)
+            @media screen and (max-width: 1025px)
                 justify-content: center
 
 
@@ -91,6 +91,9 @@
                 text-shadow: 1px 1px 6px rgba(0,0,0,.8)
 
             @media screen and (max-width: 1200px)
+                margin: 0 2em
+
+            @media screen and (max-width: 1025px)
                 width: auto
 
                 > h1, > p
@@ -99,9 +102,6 @@
         &__overlay-links
             flex-grow: 1
             align-items: center
-
-
-
 
     #home-video
         z-index: -1
@@ -142,7 +142,7 @@
         &:hover
             opacity: 1
 
-        @media screen and (max-width: 1200px)
+        @media screen and (max-width: 1140px)
             width: auto
             margin: 0 .5em
 
