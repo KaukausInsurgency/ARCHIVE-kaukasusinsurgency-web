@@ -95,9 +95,13 @@
 
             @media screen and (max-width: 1025px)
                 width: auto
+                margin-top: 2em
 
                 > h1, > p
                     display: none
+
+            @media screen and (max-width: 800px)
+                font-size: .7em
 
         &__overlay-links
             flex-grow: 1

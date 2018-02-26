@@ -88,6 +88,9 @@
             padding: 0 1em
             text-align: center
 
+            @media screen and (max-width: 900px)
+                font-size: .8em
+
             th
                 color: inherit !important
                 text-align: center

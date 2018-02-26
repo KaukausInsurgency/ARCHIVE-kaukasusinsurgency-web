@@ -99,6 +99,11 @@
             @media screen and (max-width: 800px)
                 width: 40%
 
+        &-value
+            @media screen and (max-width: 800px)
+                flex-grow: 1
+                text-align: center
+
         &-copy
             color: white - 15
             background: #464646 + 20
@@ -118,6 +123,7 @@
             min-width: auto
             padding-left: 0
             margin-top: 2em
+            text-align: center
 
     > img
         width: 100%

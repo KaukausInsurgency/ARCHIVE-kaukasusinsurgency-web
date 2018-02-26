@@ -68,6 +68,7 @@
 
             @media screen and (max-width: 1275px)
                 width: auto
+                font-size: .75em
 
             > h1
                 color: white
@@ -95,6 +96,7 @@
             display: flex
 
             @media screen and (max-width: 1275px)
+                font-size: .8em
                 width: auto
 
         &__nav-link
