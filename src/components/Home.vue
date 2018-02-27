@@ -10,6 +10,9 @@
                         <h1>Distributed Dynamic Campaign</h1>
                         <p><span class="fugaz">KI</span> is a fully customizable multiplayer campaign engine that gives players a persistent DCS experience between a network of community-run servers.</p>
                         <p>Whether you're looking to fly, be a part of the <span class="fugaz">KI</span> network of servers, or build your own <span class="fugaz">KI</span> missions be sure to start at our documentation.</p>
+                        <div class="video__overlay-title">
+                            <h1 class="fugaz">Kaukasus Insurgency</h1>
+                        </div>
                         <div class="video__overlay-links">
                             <router-link to="docs" class="button button--docs">Learn More</router-link>
                             <router-link to="servers" class="button button--servers">Find Servers</router-link>
@@ -94,8 +97,9 @@
                 margin: 0 2em
 
             @media screen and (max-width: 1025px)
+                text-align: center
                 width: auto
-                margin-top: 2em
+                margin-top: 1em
 
                 > h1, > p
                     display: none
@@ -106,6 +110,15 @@
         &__overlay-links
             flex-grow: 1
             align-items: center
+
+        &__overlay-title
+            font-size: 1.8em
+            display: none
+
+            @media screen and (max-width: 1025px)
+                display: block
+
+
 
     #home-video
         z-index: -1
