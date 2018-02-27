@@ -8,7 +8,7 @@
           <router-link to="/docs" class="nav__link">DOCS</router-link>
           <router-link to="/servers" class="nav__link">SERVERS</router-link>
           <a class="nav__link">STATS</a>
-          <a class="nav__link">GITHUB</a>
+          <a href="//github.com/KaukausInsurgency/KI" target="_blank" class="nav__link">GITHUB</a>
         </nav>
       </div>
     </section>
