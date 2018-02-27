@@ -99,7 +99,7 @@
             @media screen and (max-width: 1025px)
                 text-align: center
                 width: auto
-                margin-top: 1em
+                margin-top: 2em
 
                 > h1, > p
                     display: none
