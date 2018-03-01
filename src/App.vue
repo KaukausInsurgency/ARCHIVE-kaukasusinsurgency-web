@@ -118,6 +118,7 @@ export default {
 
       &--mini
         display: none
+        -webkit-tap-highlight-color:  rgba(255, 255, 255, 0)
 
       @media screen and (max-width: 950px)
         display: none
