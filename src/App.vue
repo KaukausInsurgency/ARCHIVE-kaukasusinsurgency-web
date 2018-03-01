@@ -1,14 +1,27 @@
 <template>
   <div id="app">
+    <section class="mobile-nav" v-if="showMenu">
+      <nav class="mobile-nav__nav">
+        <router-link to="/docs" class="mobile-nav__link">DOCS</router-link>
+        <router-link to="/servers" class="mobile-nav__link">SERVERS</router-link>
+        <a class="mobile-nav__link">STATS</a>
+        <a class="mobile-nav__link" href="//github.com/KaukausInsurgency/KI" target="_blank">GITHUB</a>
+      </nav>
+    </section>
     <section class="navSection" v-if="!$route.meta.fullscreen">
-      <div class="navBar" v-bind:class="{'navBar--dark': $route.meta.darkNav}">
-        <a class="navBar__title" href="/">Kaukasus Insurgency</a>
-        <a class="navBar__title navBar__title--mini" href="/">KI</a>
+      <div class="navBar" v-bind:class="{'navBar--dark': $route.meta.darkNav && !showMenu}">
+        <div class="navBar__title-container">
+          <a class="navBar__title" href="/">Kaukasus Insurgency</a>
+          <a class="navBar__title navBar__title--mini" href="/">KI</a>
+        </div>
         <nav class="nav nav--main">
           <router-link to="/docs" class="nav__link">DOCS</router-link>
           <router-link to="/servers" class="nav__link">SERVERS</router-link>
           <a class="nav__link">STATS</a>
           <a href="//github.com/KaukausInsurgency/KI" target="_blank" class="nav__link">GITHUB</a>
+          <div v-on:click="toggleMenu" class="nav__mobile-button">
+            <i class="fa fa-bars"></i>
+          </div>
         </nav>
       </div>
     </section>
@@ -26,8 +39,14 @@ export default {
   name: 'App',
   data() {
     return {
+      showMenu: false
     }
   },
+  methods: {
+    toggleMenu() {
+      this.showMenu = !this.showMenu
+    }
+  }
 }
 </script>
 
@@ -81,11 +100,13 @@ export default {
     display: flex
     flex-grow: 1
 
+    &__title-container
+      flex-grow: 1
+
     &__title
       color: white - 20
       font-family: 'Fugaz One', cursive
       font-size: 1.8em
-      flex-grow: 1
       font-weight: bold
       text-decoration: none
       opacity: .9
@@ -97,11 +118,11 @@ export default {
       &--mini
         display: none
 
-      @media screen and (max-width: 800px)
+      @media screen and (max-width: 950px)
         display: none
 
         &--mini
-          display: block
+          display: inline
 
     &--dark
       text-shadow: none
@@ -109,15 +130,15 @@ export default {
       .navBar__title
         color: black + 80
 
-      .nav__link
-        color: black + 20
+      .nav__link, .nav__mobile-button
+        color: black + 80
 
         &--active
-          border-color: black
+          border-color: black + 80
 
         &:hover
-          color: black
-          border-color: black
+          color: black + 20
+          border-color: black + 20
 
   .nav
 
@@ -134,6 +155,9 @@ export default {
       text-decoration: none
       color: white - 20
 
+      @media screen and (max-width: 950px)
+        display: none
+
       &--active
         border-color: white
 
@@ -144,6 +168,33 @@ export default {
         color: white
         border-color: white
 
+    &__mobile-button
+      font-size: 1.9em
+      display: none
+      cursor: pointer
+
+      @media screen and (max-width: 950px)
+        display: block
+
+  .mobile-nav
+    z-index: 99
+    background: rgb(30,30,30)
+    position: absolute
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+
+    &__nav
+      margin-top: 4em
+      font-size: 1.5em
+      text-align: center
+
+    &__link
+      color: white
+      text-decoration: none
+      display: block
+      padding: .5em 0
 
   .footer
     color: white - 20

@@ -30,6 +30,7 @@
                     <h1>Stats</h1>
                     <h3>Top ACE</h3>
                     <h3>Top CAS</h3>
+                    <i class="fa fa-bars"></i>
                 </div>
             </div>
         </section>
@@ -117,8 +118,6 @@
 
             @media screen and (max-width: 1025px)
                 display: block
-
-
 
     #home-video
         z-index: -1
