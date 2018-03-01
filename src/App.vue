@@ -2,10 +2,11 @@
   <div id="app">
     <section class="mobile-nav" v-if="showMenu">
       <nav class="mobile-nav__nav">
-        <router-link to="/docs" class="mobile-nav__link">DOCS</router-link>
-        <router-link to="/servers" class="mobile-nav__link">SERVERS</router-link>
-        <a class="mobile-nav__link">STATS</a>
-        <a class="mobile-nav__link" href="//github.com/KaukausInsurgency/KI" target="_blank">GITHUB</a>
+        <router-link @click.native="showMenu = false" to="/" class="mobile-nav__link">HOME</router-link>
+        <router-link @click.native="showMenu = false" to="/docs" class="mobile-nav__link">DOCS</router-link>
+        <router-link @click.native="showMenu = false" to="/servers" class="mobile-nav__link">SERVERS</router-link>
+        <a @click.native="showMenu = false" class="mobile-nav__link">STATS</a>
+        <a @click.native="showMenu = false" class="mobile-nav__link" href="//github.com/KaukausInsurgency/KI" target="_blank">GITHUB</a>
       </nav>
     </section>
     <section class="navSection" v-if="!$route.meta.fullscreen">
