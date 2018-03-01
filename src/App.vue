@@ -6,7 +6,7 @@
         <router-link @click.native="showMenu = false" to="/docs" class="mobile-nav__link">DOCS</router-link>
         <router-link @click.native="showMenu = false" to="/servers" class="mobile-nav__link">SERVERS</router-link>
         <a @click.native="showMenu = false" class="mobile-nav__link">STATS</a>
-        <a @click.native="showMenu = false" class="mobile-nav__link" href="//github.com/KaukausInsurgency/KI" target="_blank">GITHUB</a>
+        <a @click.native="showMenu = false" class="mobile-nav__link" href="//github.com/KaukausInsurgency" target="_blank">GITHUB</a>
       </nav>
     </section>
     <section class="navSection" v-if="!$route.meta.fullscreen">
@@ -19,7 +19,7 @@
           <router-link to="/docs" class="nav__link">DOCS</router-link>
           <router-link to="/servers" class="nav__link">SERVERS</router-link>
           <a class="nav__link">STATS</a>
-          <a href="//github.com/KaukausInsurgency/KI" target="_blank" class="nav__link">GITHUB</a>
+          <a href="//github.com/KaukausInsurgency" target="_blank" class="nav__link">GITHUB</a>
           <div v-on:click="toggleMenu" class="nav__mobile-button">
             <i class="fa fa-bars"></i>
           </div>
