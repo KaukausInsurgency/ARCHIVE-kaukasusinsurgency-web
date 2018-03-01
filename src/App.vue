@@ -173,6 +173,7 @@ export default {
       font-size: 1.9em
       display: none
       cursor: pointer
+      -webkit-tap-highlight-color:  rgba(255, 255, 255, 0)
 
       @media screen and (max-width: 950px)
         display: block
